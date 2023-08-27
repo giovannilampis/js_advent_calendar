@@ -1,0 +1,139 @@
+/* COLOR_PALETTE */
+:root {
+    --blue: #3535ec;
+    --dark_blue: #120945;
+    --gray: #d4d7f5;
+    --green: #306753;
+    --pink: #de7eb6;
+    --yellow: #f2ad41;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* UTILITIES */
+body {
+    font-family: 'Livvic', Arial, Helvetica sans-serif;
+    background-color: var(--dark_blue);
+    color: var(--white);
+}
+
+header {
+    background-color: var(--blue);
+    height: 220px;
+    border-radius: 0 0 20px 20px;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    background-image: url("../images/header-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 70px ;
+
+    z-index: 1;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    padding: 32px 16px;
+}
+
+.calendar {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    background-color: var(--green);
+    margin: 5px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:last-child {
+    width: 100%;
+    background-color: #d4d7f5;
+    color: var(--green);
+}
+
+.box-icon {
+    width: 20px;
+    height: 30px;
+}
+
+.box-date {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.box-open {
+    opacity: 0.6;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(12, 11, 74, 0.8);
+    padding: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+}
+
+.modal-window {
+    min-width: 320px;
+    max-height: 320px;
+    background-color: #de7eb5;
+    text-align: center;
+
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 12px;
+
+}
+
+.modal-content {
+    margin-bottom: 12px;
+}
+.modal-content * {
+    max-width: 100%;
+}
+
+.modal-button {
+    border: none;
+    padding: 8px 12px;
+    font-size: 20px;
+    background-color: #3535ec;
+    color: var(--white);
+}
+
+.modal-hidden {
+    visibility: hidden;
+}
